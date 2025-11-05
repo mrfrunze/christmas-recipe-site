@@ -1,0 +1,121 @@
+[
+  {
+    "id": "1",
+    "title": "Äppelkaka",
+    "description": "En saftig äppelkaka med smaler av kanel och karemumma",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243393/cf_259/appelkaka.jpg",
+    "timeInMins": 45,
+    "price": 99,
+    "categories": [
+      "Bakelser",
+      "Kakor",
+      "Paj"
+    ],
+    "instructions": [
+      "Sätt ugnen på 175C",
+      "Smörj och bröa en rund form med löstagbar kant, ca 24 cm i dm med matfett och ströbröd",
+      "Kaka: Mortla kardemumma. Rör ihop matfettet med socke roch kardemumma. Tillsätt ett ägg i taget och vispa väl mellan varje ägg. Vispa ner mjölken. Vänd ner mjölet blandat med bakpulvret. Rör ihop till en slät smet. Häll smeten i formen",
+      "Fyllning och garnering: Skala och skär äpplena i tunna klyftor. Blanda dem med kanel och socker och stick ner klyftorna i tätt i smeten runtom kakan.",
+      "Grädda kakan i nedre delen av ugnen 30-40 min. Kontrollera med provsticka att kakan är torr.",
+      "Serveringsförslag: Servera kakan ljummen eller kall med vanliljsås, lättvispad grädde eller vaniljglass."
+    ],
+    "ingredients": [
+      { "name": "Smör eller margarin", "amount": 1, "unit": "msk" },
+      { "name": "Hela kardemummakärnor", "amount": 1, "unit": "tsk" },
+      { "name": "Rumstemepererat smör", "amount": 125, "unit": "gram" },
+      { "name": "Strösocker", "amount": 2, "unit": "dl" },
+      { "name": "Ägg", "amount": 2, "unit": "st" },
+      { "name": "Mjölk", "amount": 0.5, "unit": "dl" },
+      { "name": "Vetemjöl", "amount": 2.5, "unit": "dl" },
+      { "name": "Bakpulver", "amount": 1.5, "unit": "dl" },
+      { "name": "Medelstora äpplen", "amount": 2, "unit": "st" },
+      { "name": "Malen kanel", "amount": 1.5, "unit": "tsk" },
+      { "name": "Strösocker", "amount": 1, "unit": "msk" }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Morotsbollar",
+    "description": "Morotsbollar med mandel, kardemumma och citron",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_123761/cf_259/morotsbollar_med_mandel__kardemumma_och_citron.jpg",
+    "timeInMins": 30,
+    "price": 49,
+    "categories": [
+      "Bakelser",
+      "Kokos"
+    ],
+    "instructions": [
+      "Mixa alla ingredienser utom kokosen i en matberedare. Smaksätt med några droppar citronsaft.",
+      "Rulla smeten till runda bollar",
+      "Rulla bollarna i kokosen"
+    ],
+    "ingredients": [
+      { "name": "Finrivna morötter", "amount": 2, "unit": "dl" },
+      { "name": "Hela skalade mandlar", "amount": 100, "unit": "gram" },
+      { "name": "Urkärnade dadlar", "amount": 100, "unit": "gram" },
+      { "name": "Malen kardemumma", "amount": 1, "unit": "tsk" },
+      { "name": "Citron (rivet skal och några droppar saft)", "amount": 0.5, "unit": "citron" },
+      { "name": "Riven kokos", "amount": 1, "unit": "dl" }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Chokladtryfflar med pepparkakssmak",
+    "description": "Len mörk chokladtryffel med smak av pepparkaka – perfekt till julens gottebord.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_65420/cf_259/julchokladtryffel_med_pepparkakskross.jpg",
+    "timeInMins": 25,
+    "price": 55,
+    "categories": [
+      "Godis",
+      "Jul",
+      "Choklad"
+    ],
+    "instructions": [
+      "Hacka chokladen fint och lägg i en skål.",
+      "Koka upp grädden med smör och pepparkakskrydda.",
+      "Häll den heta gräddblandningen över chokladen och rör tills den smält och blivit slät.",
+      "Låt tryffelsmeten stelna i kyl ca 2 timmar.",
+      "Forma små bollar och rulla i kakao eller florsocker."
+    ],
+    "ingredients": [
+      { "name": "Mörk choklad (70%)", "amount": 200, "unit": "gram" },
+      { "name": "Vispgrädde", "amount": 1, "unit": "dl" },
+      { "name": "Smör", "amount": 25, "unit": "gram" },
+      { "name": "Pepparkakskrydda", "amount": 1, "unit": "tsk" },
+      { "name": "Kakao (att rulla i)", "amount": 3, "unit": "msk" }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Saffranskokosbollar",
+    "description": "Juliga kokosbollar med saffran och vit choklad – söta, solgula och ljuvligt goda.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245027/cf_259/saffransbollar.jpg",
+    "timeInMins": 20,
+    "price": 45,
+    "categories": [
+      "Godis",
+      "Jul",
+      "Kokos"
+    ],
+    "instructions": [
+      "Smält smöret och låt svalna något.",
+      "Rör ner saffran och vit choklad i det smälta smöret.",
+      "Blanda i havregryn, socker och vaniljsocker och arbeta ihop till en smet.",
+      "Forma små bollar och rulla i riven kokos.",
+      "Förvara i kylskåp tills de stelnat."
+    ],
+    "ingredients": [
+      { "name": "Smör", "amount": 75, "unit": "gram" },
+      { "name": "Havregryn", "amount": 3, "unit": "dl" },
+      { "name": "Vit choklad, hackad", "amount": 50, "unit": "gram" },
+      { "name": "Saffran", "amount": 0.5, "unit": "g" },
+      { "name": "Strösocker", "amount": 1, "unit": "dl" },
+      { "name": "Vaniljsocker", "amount": 1, "unit": "tsk" },
+      { "name": "Riven kokos (att rulla i)", "amount": 1, "unit": "dl" }
+    ]
+  }
+]

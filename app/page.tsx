@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Header from "../components/Header";
+import RecetionsGrid from "../components/RecetionsGrid";
 
 export default function Home() {
   return (
-    <div className="">
-      <h1>Ica recipi</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+        <RecetionsGrid/>
+      </main>
+    </>
   );
 }
