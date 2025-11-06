@@ -7,11 +7,7 @@
     "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_243393/cf_259/appelkaka.jpg",
     "timeInMins": 45,
     "price": 99,
-    "categories": [
-      "Bakelser",
-      "Kakor",
-      "Paj"
-    ],
+    "categories": ["Bakelser", "Kakor", "Paj"],
     "instructions": [
       "Sätt ugnen på 175C",
       "Smörj och bröa en rund form med löstagbar kant, ca 24 cm i dm med matfett och ströbröd",
@@ -42,10 +38,7 @@
     "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_123761/cf_259/morotsbollar_med_mandel__kardemumma_och_citron.jpg",
     "timeInMins": 30,
     "price": 49,
-    "categories": [
-      "Bakelser",
-      "Kokos"
-    ],
+    "categories": ["Bakelser", "Kokos"],
     "instructions": [
       "Mixa alla ingredienser utom kokosen i en matberedare. Smaksätt med några droppar citronsaft.",
       "Rulla smeten till runda bollar",
@@ -56,23 +49,23 @@
       { "name": "Hela skalade mandlar", "amount": 100, "unit": "gram" },
       { "name": "Urkärnade dadlar", "amount": 100, "unit": "gram" },
       { "name": "Malen kardemumma", "amount": 1, "unit": "tsk" },
-      { "name": "Citron (rivet skal och några droppar saft)", "amount": 0.5, "unit": "citron" },
+      {
+        "name": "Citron (rivet skal och några droppar saft)",
+        "amount": 0.5,
+        "unit": "citron"
+      },
       { "name": "Riven kokos", "amount": 1, "unit": "dl" }
     ]
   },
   {
     "id": "3",
-    "title": "Chokladtryfflar med pepparkakssmak",
+    "title": "Chokladtryfflar med pepparkaks",
     "description": "Len mörk chokladtryffel med smak av pepparkaka – perfekt till julens gottebord.",
     "ratings": [],
     "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_65420/cf_259/julchokladtryffel_med_pepparkakskross.jpg",
     "timeInMins": 25,
     "price": 55,
-    "categories": [
-      "Godis",
-      "Jul",
-      "Choklad"
-    ],
+    "categories": ["Godis", "Jul", "Choklad"],
     "instructions": [
       "Hacka chokladen fint och lägg i en skål.",
       "Koka upp grädden med smör och pepparkakskrydda.",
@@ -96,11 +89,7 @@
     "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_245027/cf_259/saffransbollar.jpg",
     "timeInMins": 20,
     "price": 45,
-    "categories": [
-      "Godis",
-      "Jul",
-      "Kokos"
-    ],
+    "categories": ["Godis", "Jul", "Kokos"],
     "instructions": [
       "Smält smöret och låt svalna något.",
       "Rör ner saffran och vit choklad i det smälta smöret.",
@@ -117,5 +106,322 @@
       { "name": "Vaniljsocker", "amount": 1, "unit": "tsk" },
       { "name": "Riven kokos (att rulla i)", "amount": 1, "unit": "dl" }
     ]
-  }
+  },
+  {
+    "id": "5",
+    "title": "Kläddig kladdkaka",
+    "description": "Kläddig kladdkaka är en klassisk svensk chokladkaka med härligt seg och kladdig konsistens. Perfekt med vispgrädde och färska bär.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_221660/cf_259/kladdig_kladdkaka.jpg",
+    "timeInMins": 45,
+    "price": 79,
+    "categories": ["Bakverk", "Choklad", "Kakor"],
+    "instructions": [
+      "Sätt ugnen på 200°C, under- och övervärme.",
+      "Smörj och bröa en form med löstagbar kant, ca 24 cm i diameter.",
+      "Smält smöret i kastrull och låt svalna något.",
+      "Vispa ihop ägg och socker (använd inte elvisp).",
+      "Blanda kakao, vaniljsocker, vetemjöl och salt i en bunke och rör ner i äggblandningen.",
+      "Tillsätt det smälta smöret och blanda försiktigt ihop till en jämn smet.",
+      "Häll smeten i formen.",
+      "Grädda mitt i ugnen i ca 10–15 minuter tills kakan är kladdig i mitten.",
+      "Ta ut och låt kladdkakan svalna.",
+      "Sikta florsocker över kakan och servera med vispad grädde och färska bär."
+    ],
+    "ingredients": [
+      { "name": "Smör till formen", "amount": null, "unit": "" },
+      { "name": "Ströbröd till formen", "amount": null, "unit": "" },
+      { "name": "Smör", "amount": 100, "unit": "gram" },
+      { "name": "Ägg", "amount": 2, "unit": "st" },
+      { "name": "Strösocker", "amount": 2.5, "unit": "dl" },
+      { "name": "Kakao", "amount": 3, "unit": "msk" },
+      { "name": "Vaniljsocker", "amount": 2, "unit": "tsk" },
+      { "name": "Vetemjöl", "amount": 1.5, "unit": "dl" },
+      { "name": "Salt", "amount": 1, "unit": "krm" },
+      { "name": "Florsocker till garnering", "amount": null, "unit": "" },
+      { "name": "Vispgrädde", "amount": 2, "unit": "dl" },
+      { "name": "Färska bär", "amount": null, "unit": "" }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Saftig sockerkaka",
+    "description": "En klassisk och saftig sockerkaka som blir perfekt att servera till kaffet. En grundrecept som du kan smaksätta med kardemumma, citrus eller ingefära.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_234312/cf_259/saftig_sockerkaka.jpg",
+    "timeInMins": 60,
+    "price": 69,
+    "categories": ["Bakelser", "Kakor", "Klassiker"],
+    "instructions": [
+      "Sätt ugnen på 175°C.",
+      "Smörj och bröa en bakform, ca 2 liter eller 24 cm i diameter.",
+      "Vispa ägg och socker pösigt.",
+      "Blanda mjöl, bakpulver och ev. smaksättning i en skål och rör ner i äggsmeten.",
+      "Koka upp mjölken med matfettet och rör ner det.",
+      "Häll smeten i formen.",
+      "Grädda kakan i nedre delen av ugnen 35–40 minuter tills den är gyllene och en sticka kommer ut torr."
+    ],
+    "ingredients": [
+      {
+        "name": "Smör eller margarin (till formen)",
+        "amount": 1,
+        "unit": "msk"
+      },
+      { "name": "Ströbröd (till formen)", "amount": 2, "unit": "msk" },
+      { "name": "Ägg", "amount": 3, "unit": "st" },
+      { "name": "Strösocker", "amount": 3, "unit": "dl" },
+      { "name": "Vetemjöl", "amount": 3.5, "unit": "dl" },
+      { "name": "Bakpulver", "amount": 2, "unit": "tsk" },
+      { "name": "Mjölk", "amount": 1.5, "unit": "dl" },
+      { "name": "Smör eller margarin", "amount": 50, "unit": "gram" },
+      { "name": "Kardemumma (valfritt)", "amount": 1, "unit": "tsk" },
+      {
+        "name": "Rivet skal av grapefruit eller annan citrusfrukt",
+        "amount": 0.5,
+        "unit": "st"
+      },
+      { "name": "Vaniljsocker", "amount": 2, "unit": "tsk" }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Världens godaste äppelsmulpaj",
+    "description": "En härligt knaprig äppelsmulpaj med den perfekta kombinationen av sött, surt och flingsalt. Serveras bäst med vaniljsås, vispad grädde eller glass.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_77225/cf_259/toscakaka.jpg",
+    "timeInMins": 45,
+    "price": 89,
+    "categories": ["Bakelser", "Paj", "Äpple"],
+    "instructions": [
+      "Sätt ugnen på 225°C.",
+      "Smul: Skär smöret i bitar. Nyp ihop smör, mjöl och havregryn till en smulig massa.",
+      "Blanda i socker och flingsalt. Ta lite i taget av flingsaltet och smaka av degen så att saltbalansen blir lagom.",
+      "Fyllning: Skala, kärna ur och skär äpplena i mindre bitar.",
+      "Blanda äpplena med kanel, socker och flingsalt och lägg i en smord pajform, ca 28 cm i diameter (för 6 port).",
+      "Fördela smulorna över äpplena och grädda pajen mitt i ugnen i 20–25 minuter tills den fått fin färg.",
+      "Till servering: Låt svalna något och servera med vispad grädde, vaniljsås eller glass."
+    ],
+    "ingredients": [
+      { "name": "Kallt smör", "amount": 125, "unit": "gram" },
+      { "name": "Vetemjöl", "amount": 2, "unit": "dl" },
+      { "name": "Havregryn", "amount": 1, "unit": "dl" },
+      { "name": "Socker", "amount": 0.5, "unit": "dl" },
+      { "name": "Flingsalt", "amount": 0.5, "unit": "tsk" },
+      { "name": "Äpplen", "amount": 800, "unit": "gram" },
+      { "name": "Kanel", "amount": 1, "unit": "tsk" },
+      { "name": "Socker", "amount": 2, "unit": "tsk" },
+      { "name": "Flingsalt (för fyllningen)", "amount": 1, "unit": "krm" },
+      { "name": "Smör till formen", "amount": null, "unit": "" },
+      { "name": "Vispad grädde", "amount": null, "unit": "" },
+      { "name": "Vaniljsås", "amount": null, "unit": "" },
+      { "name": "Glass", "amount": null, "unit": "" }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Hovmästarsås",
+    "description": "Klassisk hovmästarsås – perfekt att servera på traditionellt vis till gravad lax. Denna variant är extra smakrik och krämig tack vare dijonsenap, svensk senap, dill och vitvinsvinäger.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_222353/cf_259/hovmastarsas.jpg",
+    "timeInMins": 15,
+    "price": 39,
+    "categories": ["Sås", "Jul", "Klassiker"],
+    "instructions": [
+      "Blanda samman de båda senapssorterna, socker, salt, peppar och vinäger.",
+      "Tillsätt oljan droppvis eller i en tunn stråle under kraftig omrörning tills såsen blir tjock. Det går utmärkt att använda elvisp.",
+      "Tillsätt hackad dill och smaka av med nymalen peppar."
+    ],
+    "ingredients": [
+      { "name": "Svensk senap", "amount": 2, "unit": "msk" },
+      { "name": "Dijonsenap", "amount": 1, "unit": "msk" },
+      { "name": "Strösocker", "amount": 1, "unit": "msk" },
+      { "name": "Salt", "amount": 0.5, "unit": "tsk" },
+      { "name": "Svartpeppar", "amount": 1, "unit": "krm" },
+      { "name": "Vitvinsvinäger", "amount": 1, "unit": "msk" },
+      { "name": "Olja", "amount": 2, "unit": "dl" },
+      { "name": "Hackad dill", "amount": 1, "unit": "dl" },
+      { "name": "Peppar", "amount": null, "unit": "" }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Gubbröra med matjessill",
+    "description": "Varsågod – den perfekta gubbröran! En klassisk, krämig och smakrik blandning med matjessill, ägg och potatis. Passar perfekt till julbordet eller som förrätt med knäckebröd.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_180359/cf_259/gubbrora_med_matjessill.jpg",
+    "timeInMins": 30,
+    "price": 59,
+    "categories": ["Jul", "Förrätt", "Sillrätter"],
+    "instructions": [
+      "Lägg äggen i kokande vatten och koka dem ca 10 minuter. Spola dem i kallt vatten.",
+      "Låt matjessillen rinna av.",
+      "Blanda crème fraiche, majonnäs och kaviar.",
+      "Skala och skär äggen i tärningar. Skala och skär potatisen i ca 1/2 x 1/2 cm stora tärningar.",
+      "Skär matjessillen i små tärningar. Finhacka gräslök och dill.",
+      "Vänd ner ägg, potatis, sill och örter i smeten. Smaksätt med salt och peppar.",
+      "Servera gärna på knäckebröd."
+    ],
+    "ingredients": [
+      { "name": "Ägg", "amount": 2, "unit": "st" },
+      { "name": "Matjessill (215 g burk)", "amount": 1, "unit": "burk" },
+      { "name": "Crème fraiche", "amount": 1, "unit": "dl" },
+      { "name": "Majonnäs", "amount": 2, "unit": "msk" },
+      { "name": "Kaviar", "amount": 2, "unit": "msk" },
+      { "name": "Kokta potatisar, medelstora", "amount": 4, "unit": "st" },
+      { "name": "Finskuren gräslök", "amount": 2, "unit": "msk" },
+      { "name": "Finskuren dill", "amount": 2, "unit": "msk" },
+      { "name": "Salt", "amount": null, "unit": "" },
+      { "name": "Svartpeppar", "amount": null, "unit": "" },
+      { "name": "Knäckebröd till servering", "amount": null, "unit": "" }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Grönkålspaj med valnötter",
+    "description": "Grönkålspaj med valnötter är perfekt på julbordet och bjuder på en härlig smakblandning. Fyll pajen med grönkål, rödlök, cheddarost, valnötter och äggstanning. Grädda i ugnen och njut av smakerna.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_209757/cf_259/gronkalspaj_med_valnotter.jpg",
+    "timeInMins": 70,
+    "price": 99,
+    "categories": ["Jul", "Paj", "Vegetarisk"],
+    "instructions": [
+      "Pajskal: Skär smöret i bitar och hacka ihop med mjölet. Tillsätt kvarg och arbeta ihop till en deg. Tryck ut degen i en pajform, ca 24 cm i diameter (för 10 port). Nagga med gaffel och låt vila kallt i 30 minuter.",
+      "Sätt ugnen på 200°C.",
+      "Förgrädda pajskalet i 10 minuter.",
+      "Fyllning: Grovhacka grönkålen och koka i lättsaltat vatten i några minuter. Låt rinna av.",
+      "Skala och skiva löken. Fräs lök och grönkål i olja i en stor stekpanna. Salta och peppra.",
+      "Äggstanning: Vispa ihop ägg, grädde och mjölk.",
+      "Fördela grönkålsblandningen i pajskalet. Häll över äggstanningen. Strö över osten och valnötterna.",
+      "Grädda i nedre delen av ugnen i 25–30 minuter."
+    ],
+    "ingredients": [
+      { "name": "Smör eller margarin", "amount": 75, "unit": "gram" },
+      { "name": "Vetemjöl", "amount": 2.5, "unit": "dl" },
+      { "name": "Mager kvarg", "amount": 0.75, "unit": "dl" },
+      { "name": "Färsk grönkål", "amount": 250, "unit": "gram" },
+      { "name": "Rödlökar", "amount": 3, "unit": "st" },
+      { "name": "Olja", "amount": 1, "unit": "msk" },
+      { "name": "Salt", "amount": 1, "unit": "tsk" },
+      { "name": "Svartpeppar", "amount": 1, "unit": "krm" },
+      { "name": "Riven cheddarost", "amount": 2, "unit": "dl" },
+      { "name": "Grovhackade valnötter", "amount": 1, "unit": "dl" },
+      { "name": "Ägg", "amount": 3, "unit": "st" },
+      { "name": "Vispgrädde", "amount": 2, "unit": "dl" },
+      { "name": "Mjölk", "amount": 1, "unit": "dl" }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Griljerad julskinka",
+    "description": "Klassisk griljerad julskinka görs enkelt genom att blanda äggula och senap. Strö lite majsstärkelse på skinkan så fäster griljeringen bättre. Toppa med ströbröd och griljera tills skinkan fått fin färg.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_234396/cf_259/griljerad_julskinka.jpg",
+    "timeInMins": 45,
+    "price": 120,
+    "categories": ["Jul", "Kött", "Klassiker"],
+    "instructions": [
+      "Sätt ugnen på 225°C.",
+      "Griljering: Rör ihop äggula och senap.",
+      "Lägg den kokta skinkan på ett ugnssäkert fat. Ta bort nätet (och svålen om du har kokat den själv). Skär ev. bort lite av fettet om det är tjockt.",
+      "Torka av skinkan med hushållspapper. Sikta över majsstärkelse. Bred griljeringen över skinkan och strö på ströbröd.",
+      "Griljera skinkan mitt i ugnen 10–15 minuter eller tills den fått fin färg. Låt den kallna innan servering."
+    ],
+    "ingredients": [
+      { "name": "Äggula", "amount": 1, "unit": "st" },
+      { "name": "Senap (gärna västervikssenap)", "amount": 0.5, "unit": "dl" },
+      { "name": "Majsstärkelse", "amount": 0.5, "unit": "msk" },
+      { "name": "Ströbröd", "amount": 2, "unit": "msk" },
+      { "name": "Färdigkokt julskinka", "amount": 1, "unit": "kg" }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Gravad lax på färsk lax",
+    "description": "Gör egen gravad lax! En given klassiker till både påsk, midsommar och julbord. Allt du behöver är laxfilé, dill, salt, socker och vitpeppar. Perfekt att förbereda i god tid.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_196342/cf_259/gravad_lax_pa_farsk_lax.jpg",
+    "timeInMins": 90,
+    "price": 140,
+    "categories": ["Jul", "Fisk", "Klassiker"],
+    "instructions": [
+      "Skär laxen i två bitar. Ta bort ev ben från laxen med en tång. Skär några snitt i fiskskinnet.",
+      "Blanda salt, socker och vitpeppar.",
+      "Gnid in filéerna med kryddblandningen. Strö dill på köttsidan och lägg ihop dem tätt mot kött. Lägg filéerna i plastpåse och förslut.",
+      "Lägg på en tallrik i kylen ca 2 dygn (vänd gärna efter halva tiden).",
+      "Till servering: Skrapa bort dill och peppar och skär i tunna skivor. Toppa gärna med färsk dill och citron."
+    ],
+    "ingredients": [
+      {
+        "name": "Odlad laxfilé i bit med skinn (mittbiten)",
+        "amount": 1,
+        "unit": "kg"
+      },
+      { "name": "Finkornigt salt", "amount": 4, "unit": "msk" },
+      { "name": "Strösocker", "amount": 4, "unit": "msk" },
+      { "name": "Grovstött vitpeppar", "amount": 2, "unit": "tsk" },
+      { "name": "Hackad dill", "amount": 1, "unit": "dl" },
+      { "name": "Färsk dill till servering", "amount": null, "unit": "" },
+      { "name": "Citron till servering", "amount": null, "unit": "" }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Inlagd sill",
+    "description": "Inlagd sill är en klassiker till midsommar, påsk och julbord. Denna inlagda sill är lättlagad, ofantligt god och en verklig fröjd för smaklökarna vid matbordet.",
+    "ratings": [],
+    "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/nacqyf40fc60qlz9u03v.jpg",
+    "timeInMins": 75,
+    "price": 60,
+    "categories": ["Jul", "Fisk", "Klassiker"],
+    "instructions": [
+      "Skala lök och morot. Skär lök och morot i tunna skivor. Koka upp övriga ingredienser till ättikslagen. Låt svalna.",
+      "Skölj sillen och skär i bitar. Varva med grönsakerna i en väl rengjord burk med lock.",
+      "Häll på den kalla lagen och sätt på locket. Låt stå i kyl minst 1 dygn före servering."
+    ],
+    "ingredients": [
+      { "name": "Rödlökar", "amount": 2, "unit": "st" },
+      { "name": "Morot", "amount": 1, "unit": "st" },
+      { "name": "Ättiksprit (12%)", "amount": 1, "unit": "dl" },
+      { "name": "Strösocker", "amount": 2, "unit": "dl" },
+      { "name": "Vatten", "amount": 3, "unit": "dl" },
+      { "name": "Kryddpepparkorn", "amount": 15, "unit": "st" },
+      { "name": "Lagerblad", "amount": 2, "unit": "st" },
+      { "name": "Förp inläggningssill (à 240 g)", "amount": 2, "unit": "förp" }
+    ]
+  },
+  {
+  "id": "14",
+  "title": "Grönkålssallad",
+  "description": "En god grönkålssallad som passar utmärkt till julbordet! Salladen består av russin, grönkål, äpple, apelsin och valnötter, med en frisk dressing av honung, citronjuice, olivolja och apelsinjuice.",
+  "ratings": [],
+  "imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_222243/cf_259/gronkalssallad.jpg",
+  "timeInMins": 60,
+  "price": 70,
+  "categories": [
+    "Jul",
+    "Sallad",
+    "Vegetariskt"
+  ],
+  "instructions": [
+    "Låt russinen mjukna i kallt vatten i ca 15 minuter.",
+    "Ta loss de inre mjuka bladen på grönkålen. Lägg dem i kokhett vatten i 1 minut, kyl snabbt i kallt vatten och låt rinna av. Skär bladen i mindre bitar.",
+    "Skala och skär apelsinen i små bitar. Skölj och kärna ur äpplet, skär i små tärningar. Grovhacka nötterna. Häll av vattnet från russinen.",
+    "Dressing: Rör samman honung, citronjuice, olivolja, apelsinjuice, salt och peppar.",
+    "Blanda alla ingredienser i en salladsskål, häll över dressingen och blanda väl. Låt stå kallt i ett par timmar före servering."
+  ],
+  "ingredients": [
+    { "name": "Russin", "amount": 0.5, "unit": "dl" },
+    { "name": "Färsk grönkål", "amount": 250, "unit": "gram" },
+    { "name": "Apelsin", "amount": 1, "unit": "st" },
+    { "name": "Rött äpple", "amount": 1, "unit": "st" },
+    { "name": "Valnötter", "amount": 0.5, "unit": "dl" },
+    { "name": "Flytande honung", "amount": 1, "unit": "msk" },
+    { "name": "Färskpressad citronjuice", "amount": 2, "unit": "msk" },
+    { "name": "Olivolja", "amount": 3, "unit": "msk" },
+    { "name": "Färskpressad apelsinjuice", "amount": 3, "unit": "msk" },
+    { "name": "Salt", "amount": 1, "unit": "tsk" },
+    { "name": "Peppar", "amount": 1, "unit": "krm" }
+  ]
+}
+
 ]
