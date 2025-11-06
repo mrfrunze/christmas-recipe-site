@@ -4,7 +4,8 @@ export interface Recipe {
   description: string;
   ratings: number[]; 
   imageUrl: string;
-  timeInMins: number;
+  difficulty: string;
+  timeInMins: string;
   price: number;
   categories: string[];
   instructions: string[];
