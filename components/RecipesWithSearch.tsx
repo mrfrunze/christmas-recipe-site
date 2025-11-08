@@ -22,7 +22,7 @@ export default function RecipesWithSearch({ recipes }: RecipesWithSearchProps) {
   const recipesToDisplay = searchTerm ? filteredRecipes : recipes;
 
   return (
-    <section className="py-10">
+    <section id="recipes" className="py-10">
       <div className="max-w-6xl mx-auto px-4">
         {/* Recipes Grid */}
         {recipesToDisplay.length > 0 ? (
@@ -31,13 +31,27 @@ export default function RecipesWithSearch({ recipes }: RecipesWithSearchProps) {
               <RecipeCard key={recipe.id} recipe={recipe} />
             ))}
           </div>
-        ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              Inga recept hittades för "{searchTerm}". Prova med ett annat sökord.
-            </p>
+        ) : searchTerm ? (
+          <div 
+            className="relative min-h-[400px] flex items-center justify-center text-center py-12 px-4"
+            style={{
+              backgroundImage: 'url(/page-eaten.svg)',
+              backgroundSize: 'contain',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-white/80"></div>
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <h2 className="text-gray-500 text-4xl font-normal">
+                Inga recept hittades för &quot;{searchTerm}&quot;. Prova med ett annat sökord.
+              </h2>
+            </div>
           </div>
-        )}
+        ) : null}
       </div>
     </section>
   );
