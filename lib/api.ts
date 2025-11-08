@@ -42,13 +42,16 @@ export async function fetchRecipes(): Promise<ApiRecipe[]> {
 }
 
 // Fetch single recipe by ID
-export async function fetchRecipeById(id: string): Promise<ApiRecipe> {
+export async function fetchRecipeById(id: string): Promise<ApiRecipe | null> {
   try {
     const response = await fetch(`${API_BASE_URL}/recipes/${id}`, {
       next: { revalidate: 60 },
     });
 
     if (!response.ok) {
+      if (response.status === 404) {
+        return null; // Recipe not found
+      }
       throw new Error(`Failed to fetch recipe: ${response.statusText}`);
     }
 
@@ -56,7 +59,7 @@ export async function fetchRecipeById(id: string): Promise<ApiRecipe> {
     return data;
   } catch (error) {
     console.error("Error fetching recipe:", error);
-    throw error;
+    return null; // Return null on error
   }
 }
 

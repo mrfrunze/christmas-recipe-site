@@ -1,7 +1,6 @@
-import { RecipeCard } from "./RecipeCard";
 import { fetchRecipes } from "@/lib/api";
 import { mergeRecipesData } from "@/lib/recipeUtils";
-import type { Recipe } from "@/lib/types";
+import RecipesWithSearch from "./RecipesWithSearch";
 
 export default async function RecetionsGrid() {
   // Fetch recipes from API
@@ -22,17 +21,8 @@ export default async function RecetionsGrid() {
   }
 
   // Merge data from API with metadata from local JSON
-  const recipes: Recipe[] = mergeRecipesData(apiRecipes);
+  const recipes = mergeRecipesData(apiRecipes);
 
-  return (
-    <section className="py-10">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  // Pass recipes to client component for search functionality
+  return <RecipesWithSearch recipes={recipes} />;
 }
