@@ -36,7 +36,6 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
             ) : (
               <PiCookingPot />
             )}
-
             <span>{recipe.difficulty}</span>
           </div>
         </div>
