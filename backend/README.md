@@ -1,123 +1,123 @@
-# Backend - API для работы с рецептами
+# Backend - Recipe API
 
-Этот проект содержит скрипты для работы с API рецептов. Вы можете отправлять рецепты на сервер, получать данные с сервера и проверять статус API.
+This project contains scripts for working with the recipe API. You can send recipes to the server, retrieve data from the server, and check the API status.
 
-## 📋 Содержание
+## 📋 Table of Contents
 
-- [Установка](#установка)
-- [Команды для отправки данных на сервер](#команды-для-отправки-данных-на-сервер)
-- [Команды для получения данных с сервера](#команды-для-получения-данных-с-сервера)
-- [Команды для проверки статуса API](#команды-для-проверки-статуса-api)
-- [Описание файлов](#описание-файлов)
-- [Структура проекта](#структура-проекта)
-- [Примеры использования](#примеры-использования)
-- [Устранение неполадок](#устранение-неполадок)
+- [Installation](#installation)
+- [Commands for Sending Data to Server](#commands-for-sending-data-to-server)
+- [Commands for Retrieving Data from Server](#commands-for-retrieving-data-from-server)
+- [Commands for Checking API Status](#commands-for-checking-api-status)
+- [File Description](#file-description)
+- [Project Structure](#project-structure)
+- [Usage Examples](#usage-examples)
+- [Troubleshooting](#troubleshooting)
 
 ---
 
-## 🚀 Установка
+## 🚀 Installation
 
-Перед использованием убедитесь, что у вас установлен Node.js (версия 18 или выше) и npm.
+Before using, make sure you have Node.js (version 18 or higher) and npm installed.
 
-### 1. Установите зависимости
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-Эта команда установит все необходимые пакеты:
-- `axios` - для HTTP-запросов
-- `tsx` - для запуска TypeScript файлов
-- `typescript` - компилятор TypeScript
-- `@types/node` - типы для Node.js
+This command will install all necessary packages:
+- `axios` - for HTTP requests
+- `tsx` - for running TypeScript files
+- `typescript` - TypeScript compiler
+- `@types/node` - Node.js type definitions
 
 ---
 
-## 📤 Команды для отправки данных на сервер
+## 📤 Commands for Sending Data to Server
 
-### Отправить все рецепты из файла `recipes.json` на сервер
+### Send all recipes from `recipes.json` file to the server
 
 ```bash
 npm run send
 ```
 
-или
+or
 
 ```bash
 npm run send-recipes
 ```
 
-**Что делает эта команда:**
-- Читает файл `../data/recipes.json`
-- Преобразует данные в формат, требуемый API
-- Отправляет каждый рецепт на сервер через POST-запрос
-- Показывает прогресс отправки для каждого рецепта
-- Выводит итоговую статистику (сколько рецептов отправлено успешно, сколько ошибок)
+**What this command does:**
+- Reads the `../data/recipes.json` file
+- Transforms data into the format required by the API
+- Sends each recipe to the server via POST request
+- Shows sending progress for each recipe
+- Outputs final statistics (how many recipes were sent successfully, how many errors)
 
-**Пример вывода:**
+**Example output:**
 ```
-📂 Читаю файл recipes.json...
-✅ Найдено рецептов: 16
+📂 Reading recipes.json file...
+✅ Found recipes: 16
 🌐 API URL: https://grupp1-xjvta.reky.se/recipes
 
 ============================================================
 
-[1/16] 📤 Отправляю: Äppelkaka
-   ✅ Успешно создан! (ID: 690f031f8a8cd707764039ba)
+[1/16] 📤 Sending: Äppelkaka
+   ✅ Successfully created! (ID: 690f031f8a8cd707764039ba)
 
-[2/16] 📤 Отправляю: Morotsbollar
-   ✅ Успешно создан! (ID: 690f03208a8cd707764039c7)
+[2/16] 📤 Sending: Morotsbollar
+   ✅ Successfully created! (ID: 690f03208a8cd707764039c7)
 
 ...
 
 ============================================================
 
-📊 ИТОГОВАЯ СТАТИСТИКА:
-   ✅ Успешно отправлено: 16
-   ❌ Ошибок: 0
-   📦 Всего рецептов: 16
+📊 FINAL STATISTICS:
+   ✅ Successfully sent: 16
+   ❌ Errors: 0
+   📦 Total recipes: 16
 
-🎉 Все рецепты успешно отправлены на сервер!
+🎉 All recipes successfully sent to server!
 ```
 
-**Важные замечания:**
-- Скрипт автоматически преобразует формат данных (удаляет поля `id`, `difficulty` и `timeInMins`)
-- Между запросами есть задержка 500 мс, чтобы не перегружать сервер
-- Ингредиенты с `null` значениями автоматически фильтруются
+**Important notes:**
+- The script automatically transforms data format (removes `id`, `difficulty`, and `timeInMins` fields)
+- There is a 500 ms delay between requests to avoid overloading the server
+- Ingredients with `null` values are automatically filtered
 
 ---
 
-## 📥 Команды для получения данных с сервера
+## 📥 Commands for Retrieving Data from Server
 
-### Получить все рецепты с сервера
+### Get all recipes from the server
 
 ```bash
 npm start
 ```
 
-или
+or
 
 ```bash
 npm run dev
 ```
 
-**Что делает эта команда:**
-- Отправляет GET-запрос на API: `https://grupp1-xjvta.reky.se/recipes`
-- Получает все рецепты с сервера
-- Выводит информацию о статусе запроса
-- Показывает количество полученных рецептов
-- Отображает пример первого рецепта в формате JSON
+**What this command does:**
+- Sends GET request to API: `https://grupp1-xjvta.reky.se/recipes`
+- Retrieves all recipes from the server
+- Outputs request status information
+- Shows the number of recipes retrieved
+- Displays an example of the first recipe in JSON format
 
-**Пример вывода:**
+**Example output:**
 ```
-🔄 Отправляю запрос к API...
+🔄 Sending request to API...
 📍 URL: https://grupp1-xjvta.reky.se/recipes
 
-✅ Запрос успешен!
-📊 Статус ответа: 200
-📦 Количество рецептов: 35
+✅ Request successful!
+📊 Response status: 200
+📦 Number of recipes: 35
 
-📋 Пример первого рецепта:
+📋 Example of first recipe:
 {
   "_id": "68ffe0cb8a8cd70776fd5cae",
   "title": "Toast skagen",
@@ -125,197 +125,197 @@ npm run dev
   ...
 }
 
-✨ Все данные получены успешно!
+✨ All data retrieved successfully!
 ```
 
 ---
 
-## 🔍 Команды для проверки статуса API
+## 🔍 Commands for Checking API Status
 
-### Проверка доступности API (базовая проверка)
+### API Availability Check (basic check)
 
 ```bash
 npm start
 ```
 
-Эта команда также служит для проверки работоспособности API. Если API работает корректно, вы увидите:
-- ✅ Статус ответа: 200
-- Список рецептов
-- Нет сообщений об ошибках
+This command also serves to check API functionality. If the API is working correctly, you will see:
+- ✅ Response status: 200
+- List of recipes
+- No error messages
 
-### Детальная проверка статуса API
+### Detailed API Status Check
 
-Вы можете использовать скрипт `getRecipes.ts` для более детальной проверки:
+You can use the `getRecipes.ts` script for a more detailed check:
 
 ```bash
 npx tsx getRecipes.ts
 ```
 
-**Что проверяется:**
-- Доступность сервера
-- Корректность ответа API
-- Формат данных
-- Наличие рецептов на сервере
+**What is checked:**
+- Server availability
+- API response correctness
+- Data format
+- Presence of recipes on the server
 
-### Проверка через прямой HTTP-запрос
+### Check via Direct HTTP Request
 
-Вы также можете использовать `curl` для проверки API:
+You can also use `curl` to check the API:
 
 ```bash
 curl https://grupp1-xjvta.reky.se/recipes
 ```
 
-Или в PowerShell (Windows):
+Or in PowerShell (Windows):
 
 ```powershell
 Invoke-WebRequest -Uri https://grupp1-xjvta.reky.se/recipes -Method GET
 ```
 
-### Признаки работоспособного API:
-- ✅ Статус ответа: 200 (OK)
-- ✅ Получен массив рецептов
-- ✅ Данные в правильном JSON формате
-- ✅ Нет ошибок сети или таймаутов
+### Signs of a Working API:
+- ✅ Response status: 200 (OK)
+- ✅ Recipe array received
+- ✅ Data in correct JSON format
+- ✅ No network errors or timeouts
 
-### Признаки проблем с API:
-- ❌ Статус ответа: 404 (Not Found) - API не найден
-- ❌ Статус ответа: 500 (Internal Server Error) - ошибка на сервере
-- ❌ Статус ответа: 503 (Service Unavailable) - сервис недоступен
-- ❌ Ошибка сети (ECONNREFUSED, ETIMEDOUT) - сервер недоступен
-- ❌ Пустой ответ или неверный формат данных
+### Signs of API Problems:
+- ❌ Response status: 404 (Not Found) - API not found
+- ❌ Response status: 500 (Internal Server Error) - server error
+- ❌ Response status: 503 (Service Unavailable) - service unavailable
+- ❌ Network error (ECONNREFUSED, ETIMEDOUT) - server unavailable
+- ❌ Empty response or incorrect data format
 
 ---
 
-## 📁 Описание файлов
+## 📁 File Description
 
 ### `getRecipes.ts`
-Скрипт для получения всех рецептов с сервера через GET-запрос.
+Script for retrieving all recipes from the server via GET request.
 
-**Основные функции:**
-- Отправляет GET-запрос на `/recipes`
-- Выводит статус и количество рецептов
-- Показывает пример первого рецепта
-- Обрабатывает ошибки с детальным выводом
+**Main functions:**
+- Sends GET request to `/recipes`
+- Outputs status and number of recipes
+- Shows an example of the first recipe
+- Handles errors with detailed output
 
 ### `sendRecipes.ts`
-Скрипт для отправки рецептов на сервер из файла `recipes.json`.
+Script for sending recipes to the server from `recipes.json` file.
 
-**Основные функции:**
-- Читает файл `../data/recipes.json`
-- Преобразует данные в формат API
-- Отправляет POST-запросы для каждого рецепта
-- Отслеживает прогресс и статистику
-- Обрабатывает ошибки для каждого рецепта
+**Main functions:**
+- Reads the `../data/recipes.json` file
+- Transforms data into API format
+- Sends POST requests for each recipe
+- Tracks progress and statistics
+- Handles errors for each recipe
 
 ### `package.json`
-Конфигурационный файл проекта с зависимостями и скриптами.
+Project configuration file with dependencies and scripts.
 
-**Скрипты:**
-- `npm start` / `npm run dev` - получить рецепты с сервера
-- `npm run send` / `npm run send-recipes` - отправить рецепты на сервер
+**Scripts:**
+- `npm start` / `npm run dev` - get recipes from server
+- `npm run send` / `npm run send-recipes` - send recipes to server
 
 ### `tsconfig.json`
-Конфигурация TypeScript для проекта.
+TypeScript configuration for the project.
 
 ---
 
-## 📂 Структура проекта
+## 📂 Project Structure
 
 ```
 backend/
-├── getRecipes.ts      # Скрипт для получения рецептов
-├── sendRecipes.ts     # Скрипт для отправки рецептов
-├── package.json       # Конфигурация проекта и зависимости
-├── tsconfig.json      # Конфигурация TypeScript
-├── README.md          # Этот файл
-└── node_modules/      # Установленные зависимости
+├── getRecipes.ts      # Script for retrieving recipes
+├── sendRecipes.ts     # Script for sending recipes
+├── package.json       # Project configuration and dependencies
+├── tsconfig.json      # TypeScript configuration
+├── README.md          # This file
+└── node_modules/      # Installed dependencies
 
 ../data/
-└── recipes.json       # Файл с рецептами для отправки на сервер
+└── recipes.json       # File with recipes to send to server
 ```
 
 ---
 
-## 💡 Примеры использования
+## 💡 Usage Examples
 
-### Пример 1: Проверка работоспособности API
+### Example 1: Check API Functionality
 
 ```bash
-# Проверить, работает ли API
+# Check if API is working
 npm start
 ```
 
-Если видите статус 200 и список рецептов - API работает корректно.
+If you see status 200 and a list of recipes - the API is working correctly.
 
-### Пример 2: Отправка рецептов на сервер
+### Example 2: Send Recipes to Server
 
 ```bash
-# Убедитесь, что файл recipes.json существует в папке ../data/
-# Затем отправьте рецепты
+# Make sure recipes.json file exists in ../data/ folder
+# Then send recipes
 npm run send
 ```
 
-### Пример 3: Получение всех рецептов с сервера
+### Example 3: Get All Recipes from Server
 
 ```bash
-# Получить все рецепты
+# Get all recipes
 npm start
 ```
 
-### Пример 4: Комбинированная проверка (отправка и получение)
+### Example 4: Combined Check (send and retrieve)
 
 ```bash
-# 1. Отправить рецепты
+# 1. Send recipes
 npm run send
 
-# 2. Проверить, что они появились на сервере
+# 2. Check that they appeared on the server
 npm start
 ```
 
 ---
 
-## 🔧 Устранение неполадок
+## 🔧 Troubleshooting
 
-### Проблема: "Cannot find module 'axios'"
+### Problem: "Cannot find module 'axios'"
 
-**Решение:**
+**Solution:**
 ```bash
 npm install
 ```
 
-### Проблема: "Cannot find module '../data/recipes.json'"
+### Problem: "Cannot find module '../data/recipes.json'"
 
-**Решение:**
-Убедитесь, что файл `recipes.json` существует в папке `../data/` относительно папки `backend/`.
+**Solution:**
+Make sure the `recipes.json` file exists in the `../data/` folder relative to the `backend/` folder.
 
-### Проблема: "ECONNREFUSED" или "ETIMEDOUT"
+### Problem: "ECONNREFUSED" or "ETIMEDOUT"
 
-**Решение:**
-- Проверьте подключение к интернету
-- Убедитесь, что API сервер доступен: `https://grupp1-xjvta.reky.se/recipes`
-- Проверьте, не блокирует ли файрвол подключение
+**Solution:**
+- Check your internet connection
+- Make sure the API server is accessible: `https://grupp1-xjvta.reky.se/recipes`
+- Check if firewall is blocking the connection
 
-### Проблема: "SyntaxError: Unexpected token"
+### Problem: "SyntaxError: Unexpected token"
 
-**Решение:**
-- Проверьте формат JSON в файле `recipes.json`
-- Убедитесь, что файл валидный JSON (можно проверить через онлайн-валидатор)
+**Solution:**
+- Check the JSON format in the `recipes.json` file
+- Make sure the file is valid JSON (can be checked via online validator)
 
-### Проблема: "Status 404" или "Status 500"
+### Problem: "Status 404" or "Status 500"
 
-**Решение:**
-- Проверьте URL API: `https://grupp1-xjvta.reky.se/recipes`
-- Убедитесь, что сервер работает
-- Проверьте формат отправляемых данных
+**Solution:**
+- Check the API URL: `https://grupp1-xjvta.reky.se/recipes`
+- Make sure the server is running
+- Check the format of data being sent
 
-### Проблема: TypeScript ошибки компиляции
+### Problem: TypeScript Compilation Errors
 
-**Решение:**
+**Solution:**
 ```bash
-# Переустановите зависимости
+# Reinstall dependencies
 npm install
 
-# Проверьте версию Node.js (должна быть 18+)
+# Check Node.js version (should be 18+)
 node --version
 ```
 
@@ -323,35 +323,35 @@ node --version
 
 ## 🌐 API Endpoint
 
-**Базовый URL:** `https://grupp1-xjvta.reky.se`
+**Base URL:** `https://grupp1-xjvta.reky.se`
 
 **Endpoints:**
-- `GET /recipes` - получить все рецепты
-- `POST /recipes` - создать новый рецепт
-- `GET /recipes/{recipeId}` - получить рецепт по ID
-- `PATCH /recipes/{recipeId}` - обновить рецепт
-- `DELETE /recipes/{recipeId}` - удалить рецепт
+- `GET /recipes` - get all recipes
+- `POST /recipes` - create new recipe
+- `GET /recipes/{recipeId}` - get recipe by ID
+- `PATCH /recipes/{recipeId}` - update recipe
+- `DELETE /recipes/{recipeId}` - delete recipe
 
 ---
 
-## 📝 Формат данных
+## 📝 Data Format
 
-### Формат рецепта для отправки (API):
+### Recipe Format for Sending (API):
 
 ```json
 {
-  "title": "Название рецепта",
-  "description": "Описание рецепта",
+  "title": "Recipe Name",
+  "description": "Recipe Description",
   "ratings": [],
   "imageUrl": "https://example.com/image.jpg",
   "price": 100,
-  "categories": ["Категория1", "Категория2"],
-  "instructions": ["Шаг 1", "Шаг 2"],
+  "categories": ["Category1", "Category2"],
+  "instructions": ["Step 1", "Step 2"],
   "ingredients": [
     {
-      "name": "Ингредиент",
+      "name": "Ingredient",
       "amount": 1,
-      "unit": "шт"
+      "unit": "pcs"
     }
   ]
 }
@@ -359,21 +359,20 @@ node --version
 
 ---
 
-## 📞 Поддержка
+## 📞 Support
 
-Если у вас возникли проблемы:
-1. Проверьте раздел "Устранение неполадок"
-2. Убедитесь, что все зависимости установлены
-3. Проверьте подключение к интернету
-4. Убедитесь, что API сервер доступен
+If you encounter problems:
+1. Check the "Troubleshooting" section
+2. Make sure all dependencies are installed
+3. Check your internet connection
+4. Make sure the API server is accessible
 
 ---
 
-## 📄 Лицензия
+## 📄 License
 
 ISC
 
 ---
 
-**Последнее обновление:** 2024
-
+**Last updated:** 2024
