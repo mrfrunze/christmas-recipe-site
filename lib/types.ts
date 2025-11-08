@@ -16,7 +16,7 @@ export interface Ingredient {
   name: string;
   amount: number;
   unit: string;
-  _id?: string; // Опциональное поле из API
+  _id?: string; // Optional field from API
 }
 
 
