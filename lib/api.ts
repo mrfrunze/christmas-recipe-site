@@ -20,6 +20,7 @@ export interface ApiRecipe {
   }[];
   avgRating?: number | null;
   timeInMins?: number;
+  difficulty?: string;
 }
 
 // Fetch all recipes from server

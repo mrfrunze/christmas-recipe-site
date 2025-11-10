@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RecetionsGrid from "../components/RecetionsGrid";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <RecetionsGrid/>
       </main>
       <Footer/>
+      <ScrollToTop />
     </>
   );
 }
