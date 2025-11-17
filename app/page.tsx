@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RecetionsGrid from "../components/RecetionsGrid";
+import CategoriesList from "../components/CategoriesList";
 import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
             Julens söta favoriter
           </h1>
         </div>
+        <CategoriesList />
         <RecetionsGrid/>
       </main>
       <Footer/>

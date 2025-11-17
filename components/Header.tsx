@@ -3,61 +3,28 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IoMdSearch, IoMdClose, IoMdMenu, IoMdClose as IoMdCloseMenu } from "react-icons/io";
+import { useRouter } from "next/navigation";
+import { IoMdMenu, IoMdClose as IoMdCloseMenu } from "react-icons/io";
 import logo from "@/public/logo-cooker.png";
+import SearchBar from "./SearchBar";
+import Navigation from "./Navigation";
 import { useSearch } from "@/contexts/SearchContext";
+import { navItems } from "@/lib/navigation";
 
 interface HeaderProps {
   hideSearch?: boolean;
 }
 
 export default function Header({ hideSearch = false }: HeaderProps) {
-  const { searchTerm, setSearchTerm } = useSearch();
-  const [inputValue, setInputValue] = useState("");
-  const [isSearchActive, setIsSearchActive] = useState(false);
+  const { setSearchTerm } = useSearch();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleSearch = () => {
-    const trimmedValue = inputValue.trim();
-    if (trimmedValue) {
-      setSearchTerm(trimmedValue);
-      setIsSearchActive(true);
-      // No scrolling - search results appear without scrolling
-    }
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setInputValue(value);
-    // If user starts typing after search was active, reset search state
-    if (isSearchActive && value !== searchTerm) {
-      setIsSearchActive(false);
-    }
-  };
-
-  const handleClear = () => {
-    setInputValue("");
-    setSearchTerm("");
-    setIsSearchActive(false);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
-  };
+  const router = useRouter();
 
   const handleLogoClick = () => {
     setSearchTerm("");
-    setInputValue("");
-    setIsSearchActive(false);
-  };
-
-  const handleHomeClick = () => {
-    setSearchTerm("");
-    setInputValue("");
-    setIsSearchActive(false);
+    // Очищаем URL от параметра search, чтобы SearchBar синхронизировался
+    router.push("/");
   };
 
   // Scroll detection
@@ -102,15 +69,6 @@ export default function Header({ hideSearch = false }: HeaderProps) {
     setIsMenuOpen(false);
   };
 
-  const handleNavLinkClick = () => {
-    setSearchTerm("");
-    setInputValue("");
-    setIsSearchActive(false);
-    closeMenu();
-  };
-
-  // Show clear button (cross) when search is active and input matches search term
-  const showClearButton = isSearchActive && inputValue.trim() === searchTerm && searchTerm !== "";
 
   return (
     <>
@@ -130,46 +88,10 @@ export default function Header({ hideSearch = false }: HeaderProps) {
           </Link>
           
           {/* Search - always in header */}
-          {!hideSearch && (
-            <div className="flex-1 flex justify-center max-w-md">
-              <div className="w-full flex items-center bg-white rounded-lg shadow-md px-3 py-1.5">
-                <input
-                  type="text"
-                  value={inputValue}
-                  onChange={handleInputChange}
-                  onKeyPress={handleKeyPress}
-                  placeholder="Sök recept..."
-                  className="w-full outline-none text-gray-700 text-sm px-2 pr-8"
-                />
-                <div className="flex items-center">
-                  {showClearButton ? (
-                    <button
-                      onClick={handleClear}
-                      className="text-gray-500 hover:text-gray-700 cursor-pointer transition-colors"
-                      aria-label="Clear search"
-                    >
-                      <IoMdClose className="text-lg" />
-                    </button>
-                  ) : (
-                    <button 
-                      onClick={handleSearch}
-                      className="text-gray-500 hover:text-gray-700 cursor-pointer transition-colors"
-                      aria-label="Search"
-                      disabled={!inputValue.trim()}
-                    >
-                      <IoMdSearch className="text-lg" />
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
+          {!hideSearch && <SearchBar />}
           
-          {/* Desktop Navigation - visible on screens >= 768px (md breakpoint) */}
-          <nav className="hidden md:flex space-x-4 text-xs sm:text-sm font-semibold uppercase flex-shrink-0">
-            <Link href="/" onClick={handleHomeClick} className="hover:underline whitespace-nowrap">Hem</Link>
-            <Link href="/#recipes" onClick={handleNavLinkClick} className="hover:underline whitespace-nowrap">Julrecept</Link>
-          </nav>
+          {/* Desktop Navigation */}
+          <Navigation items={navItems} />
 
           {/* Burger Menu Button - visible on screens < 768px */}
           <button
@@ -217,23 +139,8 @@ export default function Header({ hideSearch = false }: HeaderProps) {
             </button>
           </div>
 
-          {/* Menu Links */}
-          <nav className="flex flex-col flex-1 p-4 space-y-4">
-            <Link
-              href="/"
-              onClick={handleNavLinkClick}
-              className="text-lg font-semibold uppercase hover:bg-white/10 p-3 rounded transition-colors"
-            >
-              Hem
-            </Link>
-            <Link
-              href="/#recipes"
-              onClick={handleNavLinkClick}
-              className="text-lg font-semibold uppercase hover:bg-white/10 p-3 rounded transition-colors"
-            >
-              Julrecept
-            </Link>
-          </nav>
+          {/* Mobile Menu Links */}
+          <Navigation items={navItems} isMobile={true} onLinkClick={closeMenu} />
         </div>
       </aside>
     </>
