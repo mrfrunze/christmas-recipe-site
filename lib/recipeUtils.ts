@@ -45,6 +45,7 @@ export function mergeRecipeData(apiRecipe: ApiRecipe): Recipe {
     // Description comes from API (API stores full descriptions correctly)
     description: apiRecipe.description || "",
     ratings: apiRecipe.ratings || [],
+    avgRating: apiRecipe.avgRating ?? null,
     imageUrl: apiRecipe.imageUrl,
     price: apiRecipe.price,
     categories: apiRecipe.categories || [],

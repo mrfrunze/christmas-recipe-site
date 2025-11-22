@@ -98,4 +98,9 @@ out/
 .pnp.*
 instruction.md
 
+# Local test instructions (Russian, for local use only)
+backend/RATING_TEST_INSTRUCTIONS.md
+*_TEST_INSTRUCTIONS.md
+*_INSTRUCTIONS.md
+
 

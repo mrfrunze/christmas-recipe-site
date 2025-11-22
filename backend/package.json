@@ -8,7 +8,10 @@
     "start": "tsx getRecipes.ts",
     "dev": "tsx getRecipes.ts",
     "send": "tsx sendRecipes.ts",
-    "send-recipes": "tsx sendRecipes.ts"
+    "send-recipes": "tsx sendRecipes.ts",
+    "check-rating": "tsx checkRating.ts",
+    "test-rating": "tsx testRating.ts",
+    "inspect-api": "tsx inspectApiStructure.ts"
   },
   "keywords": [],
   "author": "",

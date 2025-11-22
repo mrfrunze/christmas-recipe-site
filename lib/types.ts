@@ -3,6 +3,7 @@ export interface Recipe {
   title: string;
   description: string;
   ratings: number[]; 
+  avgRating?: number | null;
   imageUrl: string;
   difficulty: string;
   timeInMins: string;

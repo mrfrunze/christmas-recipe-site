@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { RecipeCard } from "@/components/RecipeCard";
+import RecipeRatingSection from "@/components/RecipeRatingSection";
 import { CiClock2 } from "react-icons/ci";
 import {
   PiCookingPotDuotone,
@@ -52,6 +53,12 @@ function getRecommendedRecipes(
 export default async function RecipePage({ params }: RecipePageProps) {
   const { id } = await params;
   
+  // Logging for debugging
+  // console.log("🔍 Recipe Page Debug:", {
+  //   urlId: id,
+  //   urlPath: `/recipe/${id}`,
+  // });
+  
   // Fetch recipe from API using the ID from URL
   const apiRecipe = await fetchRecipeById(id);
 
@@ -60,8 +67,22 @@ export default async function RecipePage({ params }: RecipePageProps) {
     notFound();
   }
 
+  // Logging to check ID compliance
+  // console.log("📋 Fetched Recipe Debug:", {
+  //   urlId: id,
+  //   apiId: apiRecipe._id,
+  //   title: apiRecipe.title,
+  //   idsMatch: id === apiRecipe._id,
+  // });
+
   // Transform API data to Recipe format
   const recipe = mergeRecipeData(apiRecipe);
+  
+  // console.log("✅ Merged Recipe Debug:", {
+  //   recipeId: recipe.id,
+  //   recipeTitle: recipe.title,
+  //   idsMatch: id === recipe.id,
+  // });
 
   // Fetch all recipes for recommendations
   let recommendedRecipes: Recipe[] = [];
@@ -210,6 +231,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
               </div>
             </div>
           )}
+
+          {/* Rating Section */}
+          <RecipeRatingSection recipe={recipe} />
 
           {/* Recommended Recipes */}
           {recommendedRecipes.length > 0 && (
