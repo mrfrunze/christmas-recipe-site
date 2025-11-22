@@ -10,11 +10,13 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { RecipeCard } from "@/components/RecipeCard";
 import RecipeRatingSection from "@/components/RecipeRatingSection";
 import { CiClock2 } from "react-icons/ci";
+import { PiCookingPotDuotone, PiCookingPot } from "react-icons/pi";
 import {
-  PiCookingPotDuotone,
-  PiCookingPot,
-} from "react-icons/pi";
-import { IoArrowBack, IoPricetagsOutline, IoListOutline } from "react-icons/io5";
+  IoArrowBack,
+  IoPricetagsOutline,
+  IoListOutline,
+} from "react-icons/io5";
+import RatingDisplay from "@/components/RatingDisplay";
 
 interface RecipePageProps {
   params: Promise<{ id: string }>;
@@ -52,13 +54,13 @@ function getRecommendedRecipes(
 
 export default async function RecipePage({ params }: RecipePageProps) {
   const { id } = await params;
-  
+
   // Logging for debugging
   // console.log("🔍 Recipe Page Debug:", {
   //   urlId: id,
   //   urlPath: `/recipe/${id}`,
   // });
-  
+
   // Fetch recipe from API using the ID from URL
   const apiRecipe = await fetchRecipeById(id);
 
@@ -77,7 +79,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
   // Transform API data to Recipe format
   const recipe = mergeRecipeData(apiRecipe);
-  
+
   // console.log("✅ Merged Recipe Debug:", {
   //   recipeId: recipe.id,
   //   recipeTitle: recipe.title,
@@ -126,7 +128,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   priority
                 />
               </div>
-              
+
               {/* Content - Right side */}
               <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
                 {/* Title */}
@@ -134,11 +136,18 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                     {recipe.title}
                   </h1>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                     {recipe.description}
                   </p>
+                  <div className="min-h-[35px] flex items-center max-[450px]:justify-start py-2">
+                    <RatingDisplay
+                      rating={recipe.avgRating}
+                      ratingCount={recipe.ratings?.length || 0}
+                      size="small"
+                    />
+                  </div>
                 </div>
 
                 {/* Recipe Meta Info with Icons */}
@@ -152,7 +161,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   {recipe.ingredients && recipe.ingredients.length > 0 && (
                     <div className="flex items-center gap-3 text-gray-700">
                       <IoListOutline className="text-xl text-gray-600" />
-                      <span className="font-medium">{recipe.ingredients.length} ingredienser</span>
+                      <span className="font-medium">
+                        {recipe.ingredients.length} ingredienser
+                      </span>
                     </div>
                   )}
                   {recipe.difficulty && (
@@ -176,7 +187,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
             </div>
           </div>
 
-          {/* Ingredients and Instructions */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Ingredients */}
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -185,7 +195,10 @@ export default async function RecipePage({ params }: RecipePageProps) {
               </h2>
               <ul className="space-y-2">
                 {recipe.ingredients.map((ingredient, index) => (
-                  <li key={index} className="flex items-start gap-2 text-gray-700">
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-gray-700"
+                  >
                     <span className="text-green-600">•</span>
                     <span>
                       {ingredient.amount} {ingredient.unit} {ingredient.name}
@@ -212,7 +225,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
               </ol>
             </div>
           </div>
-
+          {/* Rating Section */}
+          <RecipeRatingSection recipe={recipe} />
+          {/* Ingredients and Instructions */}
           {/* Categories */}
           {recipe.categories && recipe.categories.length > 0 && (
             <div className="mt-8 bg-white rounded-lg shadow-md p-6">
@@ -232,9 +247,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
             </div>
           )}
 
-          {/* Rating Section */}
-          <RecipeRatingSection recipe={recipe} />
-
           {/* Recommended Recipes */}
           {recommendedRecipes.length > 0 && (
             <div className="mt-12 mb-8">
@@ -243,7 +255,10 @@ export default async function RecipePage({ params }: RecipePageProps) {
               </h2>
               <div className="grid max-[450px]:grid-cols-1 grid-cols-2 min-[769px]:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 w-full">
                 {recommendedRecipes.map((recommendedRecipe) => (
-                  <RecipeCard key={recommendedRecipe.id} recipe={recommendedRecipe} />
+                  <RecipeCard
+                    key={recommendedRecipe.id}
+                    recipe={recommendedRecipe}
+                  />
                 ))}
               </div>
             </div>
