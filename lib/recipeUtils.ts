@@ -1,4 +1,5 @@
 // Utilities for merging data from API and local JSON (hybrid approach)
+// Main data from API, difficulty and timeInMins from local JSON
 
 import { Recipe } from "./types";
 import { ApiRecipe } from "./api";
@@ -22,6 +23,7 @@ const metadataMap = new Map<string, RecipeMetadata>();
 
 /**
  * Merges recipe data from API with metadata from local JSON
+ * Main data comes from API, difficulty and timeInMins from local JSON
  * @param apiRecipe - Recipe from API
  * @returns Recipe with merged data
  */
@@ -38,29 +40,30 @@ export function mergeRecipeData(apiRecipe: ApiRecipe): Recipe {
 
   // Merge data
   const mergedRecipe: Recipe = {
-    id: apiRecipe._id, // Use _id from API as id
+    id: apiRecipe._id, // Use _id from API as id (MongoDB uses _id as primary key)
     title: apiRecipe.title,
-    description: apiRecipe.description,
+    // Description comes from API (API stores full descriptions correctly)
+    description: apiRecipe.description || "",
     ratings: apiRecipe.ratings || [],
     imageUrl: apiRecipe.imageUrl,
     price: apiRecipe.price,
     categories: apiRecipe.categories || [],
     instructions: apiRecipe.instructions || [],
     ingredients: ingredients,
-    // Metadata from local JSON (if found)
-    difficulty: metadata?.difficulty || "Medel", // Default value
-    timeInMins: metadata?.timeInMins || "30 min", // Default value
+    // Use metadata from local JSON for difficulty and timeInMins (if found)
+    // Otherwise use API data if available, or defaults
+    difficulty: metadata?.difficulty || apiRecipe.difficulty || "Medel",
+    timeInMins: metadata?.timeInMins || (apiRecipe.timeInMins ? `${apiRecipe.timeInMins} min` : "30 min"),
   };
 
   return mergedRecipe;
 }
 
 /**
- * Merges array of recipes from API with metadata
+ * Merges array of recipes from API with metadata from local JSON
  * @param apiRecipes - Array of recipes from API
  * @returns Array of recipes with merged data
  */
 export function mergeRecipesData(apiRecipes: ApiRecipe[]): Recipe[] {
   return apiRecipes.map(mergeRecipeData);
 }
-

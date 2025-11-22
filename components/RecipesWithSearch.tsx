@@ -26,7 +26,7 @@ export default function RecipesWithSearch({ recipes }: RecipesWithSearchProps) {
       <div className="max-w-6xl mx-auto px-4">
         {/* Recipes Grid */}
         {recipesToDisplay.length > 0 ? (
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid max-[450px]:grid-cols-1 grid-cols-2 min-[769px]:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 w-full">
             {recipesToDisplay.map((recipe) => (
               <RecipeCard key={recipe.id} recipe={recipe} />
             ))}
