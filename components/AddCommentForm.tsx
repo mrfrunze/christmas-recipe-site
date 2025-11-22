@@ -30,7 +30,7 @@ export default function AddCommentForm({ recipeId }: AddCommentFormProps) {
       // Invalidate and refetch comments
       queryClient.invalidateQueries({ queryKey: ["comments", recipeId] });
       // Show success toast
-      toast.success("Tack för din kommentar!");
+      toast.success("⭐ Tack för din kommentar!");
       // Reset form
       reset();
     },

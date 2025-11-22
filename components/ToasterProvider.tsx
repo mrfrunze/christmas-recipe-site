@@ -6,6 +6,7 @@ export default function ToasterProvider() {
   return (
     <Toaster
       position="top-center"
+      containerClassName="toast-center"
       toastOptions={{
         duration: 3000,
         style: {

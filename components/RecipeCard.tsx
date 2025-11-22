@@ -69,8 +69,6 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
             </div>
           </div>
         </div>
-
-      
       </article>
     </Link>
   );
