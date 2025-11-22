@@ -23,10 +23,10 @@ export interface Ingredient {
 
 export interface Comment {
   id: string;
-  recipeId: string;
+  recipeId?: string;
   name: string;
-  message: string;
-  createdAt: string;      
+  comment: string; // Changed from 'message' to 'comment' to match API
+  createdAt?: string;      
 }
 
 export interface RecipeCard {

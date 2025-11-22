@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { RecipeCard } from "@/components/RecipeCard";
 import RecipeRatingSection from "@/components/RecipeRatingSection";
+import CommentsSection from "@/components/CommentsSection";
 import { CiClock2 } from "react-icons/ci";
 import { PiCookingPotDuotone, PiCookingPot } from "react-icons/pi";
 import {
@@ -227,7 +228,10 @@ export default async function RecipePage({ params }: RecipePageProps) {
           </div>
           {/* Rating Section */}
           <RecipeRatingSection recipe={recipe} />
-          {/* Ingredients and Instructions */}
+
+          {/* Comments Section */}
+          <CommentsSection recipeId={recipe.id} />
+
           {/* Categories */}
           {recipe.categories && recipe.categories.length > 0 && (
             <div className="mt-8 bg-white rounded-lg shadow-md p-6">
